@@ -1,12 +1,20 @@
 body {
+    background-color: rgb(94, 153, 192);
+}
+
+#header {
     
 }
 
 #editor {
-    border-radius: 2.5%;
-    box-shadow: thistle 3em 3em;
+    box-shadow: tan 3em 3em;
+    overflow-y: auto;
+    max-height: 130vh;
 }
 
+.right-text {
+    text-align: end;
+}
 
 ul {
     list-style: none;   
@@ -21,4 +29,35 @@ li:hover {
 
 .skill-delete {
     margin-top: 50%;
+}
+
+img {
+    height: 25vh;
+    width: 25vh;
+    border-radius: 100%;
+    box-shadow: black .5em 0px;
+    box-shadow: white .25em 0px;
+    
+    
+}
+
+.text-dark {
+    text-shadow: none;
+    text-align: center;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+#preview {
+    text-shadow: black .1rem .1rem;
+    border: solid black .1em;
+    box-shadow: tan 3em 3em;
+}
+
+#skills {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+#upload-btn {
+    width: 100%;
 }

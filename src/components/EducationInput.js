@@ -1,29 +1,29 @@
 import React, { Component } from 'react'
 
-export default class ExperienceInput extends Component {
+export default class EducationInput extends Component {
   render() {
     return (
       <div>
           <div className='row'>
               <div className='form-group col-12'>
-                <label>{"Company " + (this.props.k + 1)}</label>
+                <label>{"School " + (this.props.k + 1)}</label>
                 <input type="text" 
                 className='form-control'
-                placeholder={"Company " + (this.props.k + 1)}
-                data-property='Company'
-                onChange={this.props.updateExperience}
-                defaultValue={this.props.work.Company}
+                placeholder={"School " + (this.props.k + 1)}
+                data-property='School'
+                onChange={this.props.updateEducation}
+                defaultValue={this.props.work.School}
                 data-k = {this.props.k}/>
               </div>
           </div>
           <div className='row'>
               <div className='form-group col-12'>
-              <label>{"Position " + (this.props.k + 1)}</label>
+              <label>{"Degree " + (this.props.k + 1)}</label>
                 <input type="text" className='form-control'
-                placeholder={"Position " + (this.props.k + 1)}
-                data-property='Position'
-                onChange={this.props.updateExperience}
-                defaultValue={this.props.work.Position}
+                placeholder={"Degree " + (this.props.k + 1)}
+                data-property='Degree'
+                onChange={this.props.updateEducation}
+                defaultValue={this.props.work.Degree}
                 data-k = {this.props.k}/>
               </div>
           </div>
@@ -33,13 +33,13 @@ export default class ExperienceInput extends Component {
                 <input type="text" className='form-control'
                 placeholder={"Duration " + (this.props.k + 1)}
                 data-property='Duration'
-                onChange={this.props.updateExperience}
+                onChange={this.props.updateEducation}
                 defaultValue={this.props.work.Duration}
                 data-k = {this.props.k}/>
               </div>
               <div className='form-group col-4 align-self-end'>
               <button data-index={this.props.k} className='btn btn-dark'
-              onClick={this.props.deleteExperience}>Delete</button>
+              onClick={this.props.deleteEducation}>Delete</button>
               </div>
           </div>
           

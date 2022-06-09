@@ -2,13 +2,15 @@ import React, { Component } from 'react'
 import FormInput from './FormInput'
 import ExperienceInput from './ExperienceInput'
 import SkillInput from './SkillInput'
+import EducationInput from './EducationInput'
 
 
 export default class Editor extends Component {
     
   render() {
     return (
-      <div id="editor" className='col-3 bg-dark text-light'>
+      <div id="editor" className='col-4 bg-dark text-light'>
+        <br/>
           <center><h1>Basic Information</h1></center>
           <div className="row">
           <FormInput
@@ -60,6 +62,16 @@ export default class Editor extends Component {
               width='6'
             />
           </div>
+          <div className='row'>
+            <div className='form-group col-12 text-primary'>
+              <label>Upload profile picture</label>
+              <input
+              className='btn btn-outline-primary' 
+              type="file"
+              id="upload-btn"
+              onChange={this.props.onImageChange}/>
+            </div>
+          </div>
           <hr/>
           <center>
             <h1>Skills</h1>
@@ -83,7 +95,8 @@ export default class Editor extends Component {
           <ul>
           {this.props.work.map((e, i) => {
                   return <ExperienceInput k={i} key={i} work={e}
-                  deleteExperience = {this.props.deleteExperience}/>
+                  deleteExperience = {this.props.deleteExperience}
+                  updateExperience = {this.props.updateExperience}/>
                 })}
           </ul>
           
@@ -99,7 +112,24 @@ export default class Editor extends Component {
           </div>
           <hr/>
           <h1>Education</h1>
+          <ul>
+          {this.props.education.map((e, i) => {
+                  return <EducationInput k={i} key={i} work={e}
+                  deleteEducation = {this.props.deleteEducation}
+                  updateEducation = {this.props.updateEducation}/>
+                })}
+          </ul>
           
+          
+          <div className='row'>
+            <div className='col-12'>
+              <center>
+                <button type="button" className="btn btn-dark" 
+                  onClick={this.props.addEducation}>Add a new education experience</button> 
+                    
+              </center>                
+            </div>
+          </div>
       </div>
       
     )

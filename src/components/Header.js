@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Header extends Component {
   render() {
     return (
-      <div className='container-fluid'>
+      <div className='container-fluid text-light' id="header">
         <div className="row justify-content-around">
           <div className='col-8'>
             <center>
@@ -13,6 +13,7 @@ export default class Header extends Component {
             </center>
           </div>
         </div>
+        <br/>
       </div>
     )
   }
