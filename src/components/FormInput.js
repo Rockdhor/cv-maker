@@ -4,7 +4,7 @@ export default class FormInput extends Component {
   render() {
     return (
       <div className={"form-group col-" + this.props.width}>
-          <label for={"input" + this.props.label}>
+          <label htmlFor={"input" + this.props.label}>
           {this.props.label}
           </label>
           <input 
